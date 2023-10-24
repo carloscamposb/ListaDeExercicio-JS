@@ -15,7 +15,7 @@ if (pesoPeixe <= 50){
     alert ('João, infelizmente você excedeu ' + excedente + ' do peso recomendado. \n Por isso terá que pagar uma multa de: ' + multa.toFixed(2) + ' reais')
 } else {
     alert ('Algo deu errado, reinicie o programa e tente novamente');
-    process.exit(1);
+   
 
 }
 

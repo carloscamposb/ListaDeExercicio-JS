@@ -4,19 +4,19 @@ Para mulheres: (62.1*h) - 44.7 */
 
 const alt = parseFloat(prompt('Escreva a sua altura: '));
 
-let sexo= prompt('Escolha o seu sexo M ou H').toUpperCase(); //aplicada a string resultante da variavel sexo
+let sexo= prompt('Escolha o seu sexo F ou M').toUpperCase(); //aplicada a string resultante da variavel sexo
 
 let peso
 
-if (sexo === 'M'){ 
+if (sexo === 'F'){ 
 sexo='Feminino';    
 peso =  (62.1*alt) - 44.7;   
-}else if (sexo === 'H'){
+}else if (sexo === 'M'){
 sexo= 'Masculino';
 peso = (72.7*alt) - 58;   
 }else{
  alert('Escolha incorreta');
- process.exit(1); //finaliza e sai do programa
+ return; //finaliza e sai do programa
 }
 
 
