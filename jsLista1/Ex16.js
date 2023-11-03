@@ -8,31 +8,43 @@ misturar latas e galões, de forma que o desperdício de tinta seja menor.
 Acrescente 10% de folga e sempre arredonde os valores para cima, isto é, considere latas cheias.
 
 */
-const metros = parseFloat(prompt('Informe o tamanho a ser pintado em metros quadrados'));
-const cobertura = 6;
-const lata = 18;
-const valorLata = 80;
-const galao = 3.6;
-const valorGalao = 25;
 
-const litrosNecessarios = (metros / cobertura)* 1.1;
 
-const latasNecessarias = Math.ceil(litrosNecessarios / lata);
-const valorLataNecessaria = latasNecessarias * valorLata;
+// Declara a variavel que receberá os metros
+const metros = parseFloat(prompt('Informe o tamanho a ser pintado em metros quadrados')); 
 
+// Declara as variáveis com valores pré-estabelecidos na questão 
+const cobertura = 6; 
+const lata = 18; 
+const valorLata = 80; 
+const galao = 3.6; 
+const valorGalao = 25; 
+
+// Calcula os litros necessários dividindo metros pela cobertura com a folga de (10% = 10/100)  solicitada na questão
+const litrosNecessarios = (metros / cobertura)* 0.1;  
+
+// Calcula as latas necessárias e valor necessários para essas latas
+const latasNecessarias = Math.ceil(litrosNecessarios / lata); 
+const valorLataNecessaria = latasNecessarias * valorLata; 
+
+// Calcula os galões necessários e o valor necessário para esses galões 
 const galoesNecessarios = Math.ceil(litrosNecessarios / galao);
-const valorGalaoNecessario = galoesNecessarios * valorGalao;
+const valorGalaoNecessario = galoesNecessarios * valorGalao; 
 
-const latasMelhorComb = Math.floor(litrosNecessarios / lata); //evitar disperdício : arredonda para baixo
-const galoesRestantes = (litrosNecessarios % lata) / galao;
-const combo = Math.ceil(galoesRestantes);
-const precoTotalMelhorComb = (latasMelhorComb * valorLata) + (combo * valorGalao);
+//Calcula melhor combo e o valor do combo na mistura de latas e galões
+const latasMelhorComb = Math.floor(litrosNecessarios / lata);               //Arredonda para baixo evitando desperdicios 
+const galoesRestantes = (litrosNecessarios % lata) / galao; 
+const combo = Math.ceil(galoesRestantes); 
+const precoTotalMelhorComb = (latasMelhorComb * valorLata) + (combo * valorGalao); 
 
+// Informa ao usuários as latas e o valor caso decida comprar apenas latas
 alert('Comprar apenas latas de 18 litros:\nQuantidade de latas: ' + latasNecessarias +
-'\nPreço total: R$ ' + valorLataNecessaria.toFixed(2));
+'\nPreço total: R$ ' + valorLataNecessaria.toFixed(2)); 
 
+// Informa ao usuário os galões e o valor caso decida comprar apenas galões
 alert('\nComprar apenas galões de 3.6 litros:\nQuantidade de galões: ' + galoesNecessarios +
-'\nPreço total: R$ ' + valorGalaoNecessario.toFixed(2));
+'\nPreço total: R$ ' + valorGalaoNecessario.toFixed(2)); 
 
+// Informa ao usuários a combinação ideal de latas e galões, bem como o valor do combo
 alert('\nMelhor combinação entre latas e galões:\nQuantidade de latas: ' + latasMelhorComb +
-'\nQuantidade de galões: ' + combo + '\nPreço total: R$ ' + precoTotalMelhorComb.toFixed(2));
+'\nQuantidade de galões: ' + combo + '\nPreço total: R$ ' + precoTotalMelhorComb.toFixed(2)); 

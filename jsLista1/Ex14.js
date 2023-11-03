@@ -14,20 +14,23 @@ calcule os descontos e o salário líquido, conforme a tabela abaixo:
 Obs.: Salário Bruto - Descontos = Salário Líquido.
 
 */
-
-const qtHora = parseFloat(prompt('Quanto você ganha por hora? '));
+//Declara variáveis qtHora e mesHora 
+const qtHora = parseFloat(prompt('Quanto você ganha por hora? ')); 
 const mesHora = parseFloat(prompt('Qual o número de horas trabalhadas no mês? '));
 
-const salarioBruto = qtHora * mesHora;
+// Declara salarioBruto que armazena o resultado da multiplicação de qtHoras e mesHora
+const salarioBruto = qtHora * mesHora; 
 
-const impostoRenda = salarioBruto * 0.11;
-const inss = salarioBruto * 0.08;
-const sindicato = salarioBruto * 0.05;
-const descontos = impostoRenda + inss + sindicato;
-const salarioLiquido = salarioBruto - descontos;
+//calcula os descontos referidos na questão 
+const impostoRenda = salarioBruto * 0.11; 
+const inss = salarioBruto * 0.08; 
+const sindicato = salarioBruto * 0.05; 
+const descontos = impostoRenda + inss + sindicato;                   //soma os descontos gerais e guarda na variável descontos 
+const salarioLiquido = salarioBruto - descontos;                    //subtrai salarioBruto de descontos para obter o salário Líquido
 
+//Mostra ao usuário os valores do salário bruto,IR.INNS, Sindicato e Salário liquído
 alert(
-    "+ Salário Bruto: R$ " + salarioBruto.toFixed(2) +
+    "+ Salário Bruto: R$ " + salarioBruto.toFixed(2) + 
     "\n - IR (11%): R$ " + impostoRenda.toFixed(2) +
     "\n - INSS (8%): R$ " + inss.toFixed(2) +
     "\n - Sindicato (5%): R$ " + sindicato.toFixed(2) +

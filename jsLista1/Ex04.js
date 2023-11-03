@@ -1,7 +1,10 @@
 // 4)Faça um Programa que converta metros para centímetros.
 
-const metros = parseFloat(prompt('Escreva um número em metros'));
+//Solicita o núemro em metros
+const metros = parseFloat(prompt('Escreva um número em metros')); 
 
-const conv = metros * 100
+//Declara a variável converteMetros para converter de metros para centímetros 
+const converteMetros = metros * 100; 
 
-alert ('O número informado em metros quando convertido é: ' + conv + ' cm.')
+// Mostra mensagem ao usuário com o resultado da conversão de m p cm.
+alert ('O número informado em metros quando convertido é: ' + converteMetros + ' cm.') 

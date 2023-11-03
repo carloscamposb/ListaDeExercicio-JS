@@ -1,11 +1,13 @@
 //6) Faça um Programa que calcule a área de um quadrado, em seguida mostre o dobro desta área para o usuário.
 
-const lado = parseFloat(prompt('Informe um lado do quadrado'));
+// Solicita o lado do quadrado  
+const lado = parseFloat(prompt('Informe um lado do quadrado: ')); 
 
-const area = lado*lado;
+//multiplica o valor do lado do quadrado para resultar na área
+const area = lado*lado; 
 
-const dobro = 2*area
+// Multiplica a área por dois , resultando no dobro da área
+const dobro = 2*area; 
 
-
-alert("A área do quadrado é: "+ area + " e o dobro dessa área foi: " + dobro)
-
+// Mostra mensagem ao usuário com o resultado da área do quadrado e o dobro da área.
+alert("A área do quadrado é: "+ area + " e o dobro dessa área foi: " + dobro) 

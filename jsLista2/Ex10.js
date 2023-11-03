@@ -2,9 +2,11 @@
  Imprima a mensagem "Bom Dia!", "Boa Tarde!" ou "Boa Noite!" ou "Valor Inválido!",
  conforme o caso.*/
 
+ //Declara a variável turno. Padroniza em maiúsculo
  const turno = prompt ('Digite o turno que você estuda M-matutino, V-Vespertino ou N-Noturno').toUpperCase();
  
 
+//Estrutura de Decisão para turno selecionado 
  switch (turno){
     case 'M':
     alert('Bom dia!');
@@ -15,6 +17,6 @@
     case 'N':
         alert('Boa noite!');
     break;
-    default:
+    default:                                //Digitar outra letra diferente de M , V ou N
         alert('Valor inválido!')               
  }

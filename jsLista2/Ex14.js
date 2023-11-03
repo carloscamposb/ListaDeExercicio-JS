@@ -11,11 +11,21 @@ se o conceito for A, B ou C ou “REPROVADO” se o conceito for D ou E.
 
 */
 
+
+
+//Declara as variáveis notas
 const nota1 = parseFloat(prompt ('Informe a nota 1: '));
 const nota2= parseFloat(prompt ('Iforme a nota 2: '));
+
+//Tira a média das notas
 const media = nota1+nota2 / 2;
+
+//Declara as variáveis e inicializa elas
 let conceito='';
 let resultado='';
+
+
+//Estrutura de decisão para saber o conceito e o resultado do aluno baseado em sua média
 
 if (media > 9 && media <=10){
     conceito = 'A';
@@ -34,6 +44,7 @@ if (media > 9 && media <=10){
     resultado='Reprovado';
 }     
 
+//Mensagem geral mostrada ao usuário com as notas , a média , o conceito e a situação do aluno correspondente
 alert('As notas são respectivamente: ' +  nota1 + ' e ' + nota2 + 
      '\n A média foi: ' + media.toFixed(2) + 
      '\n O conceito correspondente é: ' + conceito + 

@@ -3,18 +3,25 @@ Considere que a cobertura da tinta é de 1 litro para cada 3 metros quadrados e 
  que custam R$ 80,00. Informe ao usuário a quantidades de latas de tinta a serem compradas e o preço total.
 */
 
-const metros= parseFloat(prompt('Qual o tamanho em metros quadrados a ser pintado? '))
-const cobertura= 3;
+// Declara a variavel que receberá os metros
+const metros= parseFloat(prompt('Qual o tamanho em metros quadrados a ser pintado? ')) 
+
+// Declara as variáveis com valores pré-estabelecidos na questão 
+const cobertura= 3; 
 const lata = 18;
-const valor=80;
+const valor=80; 
 
 
-const litrosNecessarios = metros/cobertura;
+// Calcula os litros necessários dividindo metros pela cobertura
+const litrosNecessarios = metros/cobertura;  
 
-const latasNecessarias = Math.ceil(litrosNecessarios/lata); //arredonda para cima
+// Calcula as latas necessárias dividindo os litros necessários pela lata. Math.ceil - arredonda para cima
+const latasNecessarias = Math.ceil(litrosNecessarios/lata); 
 
-const valorNecessario = latasNecessarias * valor;
+//Calcula o valor necessário multiplicando as latas necessárias pelo valor estabelecido na questão.
+const valorNecessario = latasNecessarias * valor; 
 
-alert ('Segue a quantidade de latas de tintas necessárias para a pintura: ' + latasNecessarias);
-alert ('Segue o valor necessário a ser investido: R$ '+ valorNecessario);
+// Informa ao usuário a quantiadade de latas necessárias e o valor a ser pago
+alert ('Segue a quantidade de latas de tintas necessárias para a pintura: ' + latasNecessarias); 
+alert ('Segue o valor necessário a ser investido: R$ '+ valorNecessario)
 

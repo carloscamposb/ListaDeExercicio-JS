@@ -2,9 +2,12 @@
 (1-Domingo, 2- Segunda, etc.), se digitar outro valor deve aparecer valor inválido.
 */
 
+
+//Declara a variável dia
 const dia= prompt ('Escolha o dia da semana 1- Domingo, 2-Segunda, 3-Terça, 4-Quarta , 5-Quinta , 6-Sexta e 7-Sábado');
 
 
+//Estrutura de decisão para o dia selecionado
 
 switch (dia){
     case  '1':
@@ -35,7 +38,7 @@ switch (dia){
         alert ('Sábado');
     break;
 
-    default:
+    default:                          //Se não corresponder a nenhum valor acima
         alert ('Valor inválido')
     
 }

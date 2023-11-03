@@ -5,18 +5,19 @@ e calcule o excesso. Gravar na variável excesso a quantidade de quilos além do
 multa o valor da multa que João deverá pagar. Imprima os dados do programa com as mensagens adequadas.
 */
 
-const pesoPeixe = parseFloat(prompt('Olá Joao! por favor informe o peso total dos seus pescados: '));
+// Declara a variável que recebe o peso do peixe
+const pesoPeixe = parseFloat(prompt('Olá João! por favor informe o peso total dos seus pescados: ')); 
 
-if (pesoPeixe <= 50){
+
+//estrutura de decisão. Caso menor ou igual a 50 não há multa, caso maior há multa. 
+if (pesoPeixe <= 50){           
     alert ('Tudo certo João! Não há multas a pagar');
 }else if (pesoPeixe > 50){
-    const excedente = pesoPeixe - 50;
-    const multa = excedente * 4;
-    alert ('João, infelizmente você excedeu ' + excedente + ' do peso recomendado. \n Por isso terá que pagar uma multa de: ' + multa.toFixed(2) + ' reais')
+    const excedente = pesoPeixe - 50;                                       //calculo do excedente
+    const multa = excedente * 4;                                           //calculo da multa   
+    alert ('João, infelizmente você excedeu ' + excedente + ' do peso recomendado. \n Por isso terá que pagar uma multa de: ' + multa.toFixed(2) + ' reais'); // Mostra a possível multa que o pescador terá que pagar
 } else {
-    alert ('Algo deu errado, reinicie o programa e tente novamente');
-   
-
+    alert ('Algo deu errado, reinicie o programa e tente novamente')      //Mensagem para possiveis erros de digitação
 }
 
 

@@ -30,12 +30,16 @@ o valor do aumento;
 o novo salário, após o aumento.
 */
 
+//Declara a variável do salário do funcionário
 const valorSalario= parseFloat(prompt('Digite o valor do salario do seu funcionário: '));
+
+//Declara as outras variáveis solicitadas pela questão e inicializa elas
 let novoSalario=0;
 let percentual=0;
 let valorAumento=0;
 
 
+// Estrutura de decisão para a adição do percentual
 if (valorSalario <=280){
     percentual= 20;  
 
@@ -48,10 +52,14 @@ if (valorSalario <=280){
 } else {
     percentual= 5;    
 } 
+
+//Calcula o valor do aumento tirando o valor do percentual escolhido da forma de porcentagem e multiplicando ele pelo valor de salário passado pelo usuário
     valorAumento = (percentual/100) * valorSalario;
-    
+
+//Calcula o novo salário do funcionário somando o valor do salario com o valor do aumento    
     novoSalario = valorSalario + valorAumento;
 
+// Informa ao usuário os valores do salario antes do reajuste, o percentual aplicado, o valor do aumento e o salario novo.
 alert ('O valor do salário antes dos reajustes era de: R$ '+ valorSalario.toFixed(2));
 alert ('O percentual aplicado foi de: ' + percentual + ' %');
 alert ('O valor de aumento foi de: R$ ' + valorAumento.toFixed(2));

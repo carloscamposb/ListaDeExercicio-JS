@@ -39,10 +39,10 @@ Estou treinando a lógica com JavaScript fazendo exercícios baseado na lista  h
 - Questão 13  *
 - Questão 14  *
 - Questão 15  * 
-- Questão 16  *
+- Questão 16  **
 - Questão 17  *
-- Questão 18  *
-- Questão 19  *
+- Questão 18  **
+- Questão 19  ***
 - Questão 20  *
 - Questão 21  * 
 - Questão 22  *
